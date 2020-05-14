@@ -1,0 +1,850 @@
+Linux系统运维工程师
+  系统管理
+  服务管理
+  脚本开发
+
+Linux应用运维工程师
+  系统扩展
+  系统冗余
+  数据存储
+
+Linux   
+  系统监控
+  运维工具  一两款运维工具
+  性能优化
+
+系统架构
+
+
+VNC: virtual Network Computing,协议 
+  用途：桌面共享 
+  TigerVNC RealVNC
+  C/S架构
+  vncviewer: client   vncserver: server
+工具：picpick_inst putty Xmanager_Enterprise(远程工具)
+    VirtualBox vmware
+
+主动学习：
+  动手实践：40%
+  讲给别人：70%
+    写博客：
+      what why when where who how
+    提问：
+
+Linux运维课程体系大纲：
+  Linux入门：
+  Linux系统管理：
+  Linux服务及安全管理：
+    httpd, lamp, lnmp
+    Cache: memcached, varnish
+    DB: mysql(mariadb)---接口、集群
+  Linux Cluster:
+    LB Cluster: 负载均衡 
+          Nginx反向代理七层负载均衡， LVS四层负载均衡
+    HA Cluster：高可用集群
+          Keepalived
+  Linux Ops：ansible(中小级规模--百台服务器以下非常好用) 
+  Monitoring：zabbix
+  shell脚本编程
+
+  http:
+    tomcat, lnmt, lamt，session replication cluster
+    分布式存储系统：概念和原理
+      MogileFS(+niginx 构建分布式图片存储系统)，GlusterFS
+    MySQL：HA Cluster、MHA、备份和恢复、MySQL
+    LB Cluster：haproxy 
+    HA Cluster：Gorosync+Pacemaker，pcs/crmsh
+    Replication、Read-Writes splitting 
+    NoSQL： redis(k-v)， mongodb(document 文档存储)，HBase
+    运维工具：puppet [saltstack]，cobbler
+    虚拟化：
+      Linux操作系统原理：虚拟化技术原理：
+      kvm虚拟化应用详解：xen虚拟化：
+      虚拟化网络：SDN
+      OpenStack云栈
+    Docker：容器云：
+    ELK Stack：日志分析工具 ElasticSearch(基于文档存储全文检索引擎)，Logstash(日志收集)， Kibana(日志展示工具)
+    大数据：Hadoop v2、并行存储及分析平台：
+      HBase，Hive 构建在Hadoop基础上
+      Storm，Spark 可以在Hadoop基础上
+    系统优化：black art 90%理论 5%指标 5%动手调参数
+    Python编程：
+
+
+  RedHat：
+    认证考试：
+      RHCSA：Red Hat Certified System Administrator
+      RHCE：Red Hat Certified Engineer 7800
+      RHCA：Red Hat Certified Architect 35000
+
+  学习阶段：
+    教室学习：4个月
+    工作学习：8个月，14个月
+
+IT技术领域：
+  研发：
+    硬件：集成电路
+      机器语言
+      汇编语言
+    软件：
+      编程语言：
+        低级语言： 汇编语言，汇编器
+          写驱动
+        高级语言： C C++ Java JS ruby perl lua go
+          系统级： C，C++
+            操作系统， 对性能要求较高的服务类程序
+          应用级：Java， Python
+            应用程序：ansible，puppet，......
+  应用：
+    Linux运维：用别人研发的建构在Linux生态圈各种应用程序；
+      shell脚本编程：让某些应用工作能自动完成，程序逻辑工具
+      Python：非常高级的语言 为什么比Java高级？ 专业编程语言
+        ansible，openstack 使用python写的
+
+    DevOps:
+      Development Operations
+
+
+这个课程 不会过于深入 会比较深入
+
+
+计算机与操作系统
+  冯诺伊曼
+  过程式编程语言
+    顺序、循环、选择
+
+  多任务： multi tasks
+
+  完整的OS：Kernel + Application
+  狭义上的OS：kernel
+  GNU/Linux： GNU提供各种应用程序，Linux提供内核
+
+  程序研发：
+    大教堂式，集市(没有一个严格的协作规范)
+  OS的接口有两类：
+    GUI：Graphic User Interface
+      GNome: c, gtk
+      KDE: c++, qt
+    CLI：Command Line Interface
+      TUI： Text User Interface
+      bash、zsh、sh、csh、tcsh、ksh
+  操作系统的功能：
+    驱动程序
+    进程管理
+    内存管理
+    网络功能
+    安全
+    ......
+
+  API: Application Program Interface
+    程序员面对的编程接口
+    POSIX： Portable Operating System Interface
+      可移植操作系统接口
+  ABI: Application Binary Interface
+    程序应用者面对运行程序的接口
+
+  GNU：
+    源码：编译为 二进制格式
+      gcc，glibc，vi，linux
+    发行版： 数百种之多
+      Debian--技术人员更喜欢
+        ubuntu
+          mint
+        knopix
+      Slackware
+        S.u.S.E--商业公司支持 三个德国大学生成立 欧洲使用较多
+          SLES
+          OpenSUSE
+      RedHat--RedHat商业公司支持 美国使用较多
+        RedHat 9.0分裂:
+          RedHat Enterprise Linux: RHEL 18个月  到了RHEL 7.0
+          CentOS：Community ENTerprise OS
+          Fedora Core: 6个月
+      Gentoo
+      ArchLinux
+
+  软件程序： 版本号
+    major.minor.release
+      Linux: 0.99, 2.2, 2.4, 2.6, 3.0, 4.0
+          www.kernel.org
+      GNU:
+        vi
+        gcc
+        ...
+
+  发行版也有自己的版本号：
+    RHEL： 5.x, 6.x, 7.x
+    Debian: 8.x
+    OpenSuSE:  13.x
+
+
+  课外作业：
+    GPL，BSD，Apache
+    Android
+
+
+Linux基础：
+  CPU架构
+    x86 Intel
+    x64 x86_64(amd64) Intel
+    itanium  IA-64。Intel
+    m68000 m68k 摩托罗拉
+    PowerPC IBM
+    ppc 
+    ARM  移动智能终端主流架构   ARM公司只研发不生产
+    UltraSparc  SUN公司
+    MIPS
+    alpha 系统：hp-ux  HP
+
+  指令集：
+    RISC：精简指令集 Reduced Instruction Set Computer
+    CISC：复杂指令集 Complex Instruction Set Computer
+
+  CPU程序：向后兼容
+          时间线 前-未来 后-过去
+  汇编语言移植性很差，汇编语言经常作为中间语言，
+  不同CPU架构汇编语言不同
+  cross compile: 交叉编译   在当前架构，源代码编译成其他架构代码
+
+  Linux kernel： 根据不同架构进行编译，把底层硬件复杂隐藏起来
+    暴露出系统调用system call--程序员编程接口、程序调用的二进制程序接口
+      在这个基础上 封装了很多系统库 libraries
+  POSIX：可移植操作系统接口 定义API的一系列互相关联的标准的总称
+  API：Application Program Interface
+  ABI：Application Binary Interface
+    Linux：     ELF文件格式
+    windows： exe msi   PE文件格式
+  Linux，BSD，AIX，...：Unix-like
+    类Unix操作系统：
+      API
+      ABI
+  Stallman：GNU
+    闭源：window措施：源代码编译成二进制格式，看不到源代码  如果有后门，你是不知道的
+          后来了有了反编译，window后来就加了壳 
+    开源：提供源代码； 对服务收费
+      开源协定：
+        GPL：General Public License
+          copyleft： 与 copyright(版权) 相反
+          LGPL：Lesser GPL
+            以库接口方式调用可以不用开源
+          GPLv2，GPLv3
+
+          FSF： Free Software Foundation
+        BSD：
+        Apache：不以源作者做宣传
+          ASF：Apache Software Foundation
+
+        双线授权：
+          社区版：Community 遵循开源协定
+          企业版：收费 闭源 不遵循开源协定
+
+  程序管理：
+    程序的组成部分：
+      二进制程序：
+      配置文件：
+      库文件：应用程序的自己的库，例如二次开发
+      帮助文件：使用帮助
+
+      X，Y，Z三个程序
+      程序包管理器：
+        X：
+          程序的组成文件打包成一个或有限几个文件
+          安装：
+          卸载：
+          查询：
+
+      不同的发行版，程序包管理器可能不一样
+      Debian: dpkg, apt-get  不支持rpm，但是有转换工具
+      RedHat: rpm(RedHat packet manager,现成为Linux工业标准repo), yum --> dnf(yum的升级版, dnf 吸取了zypper开发经验升级出来的)
+      S.u.S.E: rpm, zypper
+      ArchLinux: pacman(据说最好用的包管理器)      比较有难度（安装 使用）
+      Gentoo:                      边安装边编译 更有难度
+      LFS：Linux From Scratch  提供了一本书--编译安装指南
+          从零构建最纯净的Linux操作系统
+      kali： 网络安全相关工具
+
+
+    安装Linux：
+      虚拟机： Linux
+        计算机：CPU-时序复用，内存-空间(切割)复用，IO-时序复用
+      虚拟化软件程序：
+        vmware workstation-推荐： 快照
+        virtualbox-次等：
+        parallel-小众：
+    Linux镜像站点：
+      mirrors.aliyun.com
+      mirrors.163.com
+      mirrors.sohu.com
+      清华 华科大 中科大
+    树莓派：raspbian
+
+    linux命令：
+      startx [&]  启动图形界面
+      localectl
+      locale
+
+    终端： terminal
+      用户界面：
+        GUI：
+          GNome
+          KDE
+        CLI：
+          bash, zsh, sh, csh, tcsh, ksh
+          查看支持的所有shell类型
+            cat /etc/shells
+          查看当前使用的shell
+            echo $SHELL
+      远程连接：
+        ssh协议：secure shell
+          ss -tnl 
+            查看系统监听于tcp协议的端口情况
+          查看ip地址
+            ip addr list
+            或
+            ifconfig
+
+              eth0xxx：网卡名字+序号[+mac地址]
+              lo: localhost
+              inet ip
+                ip/30  子网掩码是30位置1，30位是网络号
+            ping ip
+
+          防火墙
+            iptables -L -n 查看
+            iptables -F 清理防火墙规则 只对当前有效
+            CentOS 7+：
+              systemctl stop firewalld.service 关闭防火墙 当前有效
+              systemctl disable firewalld.service 禁用防火墙 永久有效 
+            CentOS 6-：
+              service iptables stop 关闭防火墙 当前有效
+              chkconfig iptables off 开启不启动防火墙
+
+    终端设备：terminal
+      多任务、多用户
+      物理终端，控制台：console  只在系统启动中使用
+      虚拟终端： 默认6个  tty
+        Ctrl+Alt+F[1-6]
+      图形终端：可以启动多个
+        CentOS 6-:
+          不管在哪个虚拟终端启动图形终端，都这样操作：
+            Ctrl+Alt+F7 切换到图形终端
+        CentOS 7+：
+          在哪个虚拟终端启动，即位于哪个虚拟终端：
+            Ctrl+Alt+F[1-6] 切换到启动的图形界面的终端
+      串行终端：   ttys
+        计算机没有图形界面，没有显卡，这类终端就是串行终端
+      伪终端：   pty
+        不是真正的终端，通过远程或者桌面操作等模拟出一个终端接口，如：图形界面右键打开终端，远程ssh创建的终端等等
+      查看当前终端：tty
+
+      Linux哲学思想之一：一切皆文件
+        表现之一：硬件设备也通过文件表示
+          物理终端：/dev/console
+          虚拟终端：/dev/tty#    #代表数字 1-6
+          串行终端：/dev/ttys#   #代表数字 
+          伪终端：  /dev/pts/#   #代表数字
+
+      注意： 在启动设备之后，在其上关联一个用户接口程序，即可实现与用户交互
+        查看当前终端：tty
+        查看接口程序：echo $SHELL
+        启动GUI：
+          在**虚拟终端**接口运行命令： startx [&]
+
+    CLI接口：
+      命令行接口：
+        命令提示符prompt# COMMAND(不带图形功能)
+        #-管理员 root 最高权限
+        $-普通用户  不具有管理权限，不能执行系统管理类操作
+
+        注意： 建议使用非管理员账号登录
+          sudo 临时切换至管理员执行命令，执行完后立即返回
+
+    几个基础命令：
+      tty: 查看当前终端设备
+      ifconfig 或 ip addr list：查看活动接口的IP地址
+      echo： 回显 或者 在终端打印出来
+      ping： 探测目标IP主机与当前主机连通性
+        Ctrl+c：终止命令执行
+      关机命令：
+        CentOS 7:
+          systemctl poweroff 关机 多用户不建议使用
+          systemctl reboot 重启
+        所有Linux系统：
+          shutdown 安全关机 有很多参数可用
+          poweroff 关机 多用户不建议使用
+          reboot 重启
+          halt 关机
+
+    Stallman：
+      自由含义：自由学习和修改、自由使用、自由分发、自由创建衍生版本
+
+    Linux哲学思想：
+      1、一切即文件
+         几乎把所有资源都抽象成为文件形式：
+          包括 硬件设备、通信接口等等
+         好处：统一接口 open(),read(),close(),delete(),create()
+      2、由众多功能单一的程序组成：一个程序只做一件事，并且做好
+        组合小程序完成复杂任务
+      3、程序启动后到结束，尽量避免跟用户交互：
+          目标：易于以编程的方式实现自动化任务
+      4、使用文本文件保存配置信息
+          文本最易于实现 非常底层的数据接口表现形式
+          统一编辑器工具，进行操作
+
+    思考： 文件是什么？众多文件如何有效组织起来？
+      目录：路径映射
+      文件：存储空间存储的一段流式数据，对数据可以做到按名存取
+      文件系统： 层级结构  有索引：
+        /dev/pts/2  三级结构
+        /：根目录
+          倒置树状结构：
+        路径分隔符：
+          Linux： /
+          Windows：\
+        文件路径表示：
+          绝对路径： 从根目录开始表示的路径
+          相对路径： 不是从根目录位置开始表示出的路径
+        文件名规则：
+          严格区分字符大小写
+          目录也是文件，同一路径下，两个文件不能同名
+          支持使用除 / 以外的任何字符
+          最长不能超过255个字符
+        用户家目录：/home/
+          用户的起始目录： 普通用户管理文件的位置
+        工作目录： 当前目录
+          basename 绝对path 最右侧的文件或目录名--基名
+          dirname 绝对path  basename左侧的路径名--目录名
+
+回顾：
+  开源协定：
+    GPL，LGPL，BSD，Apache
+    
+    《穿越计算机的迷雾》 《量子物理史话》
+
+
+
+Linux基础知识
+  命令的语法通用格式
+    COMMAND OPTIONS ARGUMENTS
+      发起一条命令：请求内核将某个二进制程序运行为一个进程
+        程序 --> 进程
+        静态 --> 动态(有生命周期)
+      命令本身是一个可执行的程序文件：二进制格式的文件，有可能会调用共享库文件
+        多数系统程序文件都存在：/bin /sbin /usr/bin/ /usr/sbin /usr/local/bin, /user/local/sbin
+          普通命令： /bin, /usr/bin, /usr/local/bin
+          管理命令： /sbin, /usr/sbin, /user/local/sbin
+        共享库：公共功能性程序，公共共享的程序，很多程序会用到
+          不能独立执行，没有执行入口，只能被调用执行
+        共享库：/lib, /lib64, /usr/bin, /usr/lib64, /usr/local/lib, /usr/local/lib64
+          32bits的库： /lib, /usr/lib, /usr/local/lib
+          64bits的库：/lib64, /usr/lib64, /usr/local/lib64
+          64位的系统支持32bits的库，32位的系统不支持64bits的库
+      命令必须遵循特定格式规范： exe、msi、ELF(Linux)
+        file /bin/ls  查看文件的详细信息
+
+      命令分为两类：
+        由shell程序的自带的命令： 内置命令（builtin）
+        独立的可执行程序文件，文件名即命令名：外部命令
+
+      shell程序是独特的程序，负责解析用户提供的命令：
+        环境变量： 非内置命令才在这些路径下查找
+          PATH：从那些路径中查找用户键入的命令字符串所对应的命令文件
+          echo $PATH  自左而右查找
+        使用绝对路径执行程序：不从$PATH中查找
+
+      查看命令类型： 是内置命令-内嵌，还是外部命令
+        type COMMAND
+
+      OPTIONS：
+        指定命令的运行特性
+
+        选项有两种表现形式：
+          短选项： -C， 例如 -l， -d
+            注意： 有些命令的选项没有 -
+            如果同一命令同时使用多个短选项，多数可合并： -l -d  <==>  -ld
+          长选项： --word，例如 --help， --human-readable
+            注意： 长选项不能合并
+          注意：有些选项可以带参数，此称为选项参数
+            长选项参数 =   短选项 使用空格
+
+      ARGUMENTS：
+        命令的作用对象：命令对什么生效
+        注意：不同的命令的参数，有些命令可同时带多个参数，多个之间以空白字符分隔
+
+      例如： ls -ld /var /etc /bin   多个参数
+
+      获取命令的使用帮助：
+        内部命令：
+          help COMMAND
+          如： help type
+        外部命令：
+          1、命令自带简要格式的使用帮助
+            COMMAND --help
+          2、使用手册： manual
+            位置: /user/share/man
+            man COMMAND
+              从man1-man8 查找，只显示第一次出现的
+              如果查看指定手册。man 5 passwd
+
+
+              SECTION：
+                NAME： 功能性说明
+                SYNOPSIS：语法格式
+                DESCRIPTION：描述
+                OPTIONS：选项
+                EXAMPLES：使用示例
+                AUTHOR：作者
+                BUGS：报告程序bug的方式
+                SEE ALSO：参考
+                ...
+
+              SYNOPSIS：
+                []: 可选
+                <>：必须提供的内容
+                a|b|c: 多选一
+                ...: 同类内容可出现多个
+
+            使用手册： 压缩格式的文件，有章节之分
+              /usr/share/man 
+                man1， man2，...
+
+                man1: 用户命令：包括管理员，用户
+                man2: 系统调用
+                man3: C库调用
+                man4: 设备文件及特殊文件
+                man5: 文件格式，配置文件格式
+                man6: 游戏使用帮助
+                man7: 杂项
+                man8: 管理工具及守护进程
+
+              man CHAPTER COMMAND
+                注意：其执行过程是查询数据库进行的
+                查看命令在哪些章节
+                  whatis COMMAND 
+                    手动更新： makewhatis
+                  whereis COMMAND
+            man命令打开手册以后的操作方法：
+              翻屏：
+                空格键：向下翻页
+                b: 向上翻页
+                ctrl+d: 向下翻半页
+                ctrl+u：向上翻半页
+                回车键：向下翻一行
+                k：向上翻一行
+                G：跳转到最后一行
+                #G：跳转至指定行
+                1G：跳转至文件首部
+
+              文本搜索：
+                /keyword：自上而下查找，区分大小写，全小写查找不区分
+                ?keyword：自下而上查找, 区分大小写, 全小写查找不区分
+                  n：与查找命令方向相同
+                  N：与查找命令方向相反
+
+              退出： 
+                q： quit
+            选项：
+              -M /PATH/TO/SOMEDIR 到指定目录下查找命令手册并打开之
+
+            练习： useradd
+              添加用户
+                useradd username
+                验证
+                  id username
+                  或者
+                  tail -1 /etc/passwd
+
+          3、info COMMAND
+            获取命令的在线文档
+          
+          4、很多应用程序自带帮助文档： /usr/share/doc/APP-VERSION
+            README：程序的相关信息
+            INSTAL：安装帮助
+            CHANGES：版本迭代时的改动信息
+
+          5、主流发行版官方文档
+            http://www.redhat.com/doc
+
+          6、程序官方的文档
+            官方站点上的“Document”
+
+          7、搜索引擎
+            google
+              keyword filetype:pdf
+              keyword site:domain.tld
+              ...
+
+        
+        书籍的出版社：
+          O'Reiley
+          Wrox
+          机械工业、电子工业、人民邮电、清华大学、水利水电
+
+      常用命令：
+        Linux文件系统
+          1、文件名名称严格区分字符大小写
+          2、文件可以使用除/以外的任意字符
+            不建议特殊字符，可以使用下划线_
+          3、文件名长度不能超过255字符
+          4、以.开头的文件为隐藏文件
+              .: 当前目录
+              ..:当前目录上一级目录
+
+        工作目录： working directory
+        家目录： home
+
+        常用命令：
+          pwd: printing working directory
+          cd: changing directory
+              cd   
+              cd ~ 切换到家目录
+              cd ~username 切换到某个用户的家目录
+              cd -  切换到上次目录与当前目录来回切换
+                相关的环境变量
+                  $PWD: 当前工作目录
+                  $OLDPWD: 上一次的工作目录
+
+          ls: list, 列出指定目录下的内容
+            -a: 显示所有文件，包括隐藏文件
+            -A: 显示除. 和 ..之外的所有文件
+            -l: --long， 长格式列表，即显示文件的详细属性信息：
+              -rw-r--r-- 1 root root 8957 10月 14 19:34 boot.log
+                -文件类型：-，d，b，c，l，s，p
+                1: 硬连接的次数
+                root：属主
+                root：属组
+                8957: 数字表示文件大小，单位是字节
+                10月 14 19:34：最近修改的事件
+            -h，--human-readable： 对文件大小单位换算，换算后结果可能会非精确值
+            -d：目录自身属性 
+            -r：reverse，逆序显示 
+            -R：recursive，递归显示
+          cat：文件文本查看工具
+            cat filelist...
+            -n：显示文本行编号
+            -E：显示行结束符
+            tac: 反向显示
+          file：查看文件内容类型
+            file filelist...
+          echo：回显  显示一行文本
+            echo [SHORT-OPTION]... [STRING]...
+              -n：输出完成不自动换行
+              -e：让反斜线生效\
+                echo -e "hello \n world!"
+                  \n 换行
+                  \t tab
+                  \b 退格
+              STRING： 引号、单引号、双引号
+                单引号：强引用，变量引用不执行替换
+                  echo '$SHELL'
+                双引号：弱引用，变量引用会被替换
+                  echo "$SHELL"
+          注意：变量引用的正规富豪
+            ${name}
+
+        关机或重启命令：shutdown
+          shutdown [OPTIONS...] [TIME] [WALL...]
+            OPTIONS:
+              -h: halt
+              -r: reboot
+              -c: cancel
+            TIME:
+              now
+              hh:mm
+              +m
+                +0
+            WALL: 给所有的用户广播一条消息
+               shutdown -h +5 "hello"
+
+        日期相关命令：
+          Linux：系统启动时从硬件读取日期和时间信息，读取完成以后，就不再与硬件相关联
+            系统时钟
+            硬件时钟
+          date： print or set the system date and time
+            查看系统时钟
+            date [OPTION]... [+FORMAT]
+              date +%F  显示日期
+              date +%T  显示时间
+              date +%F-%T 显示日期时间
+              date +%F+%T 显示日期时间
+              %s： 从1970.1.1 00:00:00 开始的秒数
+              ...
+            设定日期时间 
+              date [-u|--utc|--universal] [MMD‐Dhhmm[[CC]YY][.ss]]
+              CC：两位年份
+              YY：四位年份
+
+          hwclock，clock：硬件时钟
+            显示或设定硬件时钟
+              -s, --hctosys：以硬件时钟为准，把系统调整为与硬件时间相同
+              -w, --systohc：以系统时钟为准，把硬件时间调整为与系统时钟相同
+          cal：日历
+            cal [[month] year]
+            cal 当前月份
+            cal 2020   显示2020日历
+
+      课外作业： which whereis who 
+        which：查看command的绝对路径 shell命令路径
+        whereis：找出一个命令对应的二进制文件，源文件和使用手册
+          locate  the binary, source, and manual page files for a command
+        who：查看谁登录
+
+  回顾：
+    如何获取使用帮助：
+      help
+      --help，man，info
+      自带文档(README，CHANGELOG，INSTALL)，官方文档
+      发行版的文档(例如redhat，suse等)
+      Google
+
+      Linux Kernel：Documentation
+
+      manual：使用手册
+        whatis keyword
+        man # KEYWORD
+
+      基础命令：pwd cd ls echo date clock cal hwclock cat tac file type tty halt poweroff shutdown reboot
+
+    Linux文件系统：
+      Linux公共库：glibc  绝大多数应用程序或多或少调用了glibc提供的函数
+
+        程序编译方式
+          动态编译：源代码中不包括调用的库文件，编译时把库文件独立编译完，放到内存中，多个程序调用同一份编译完成的库文件的库函数。内存中只存一份库文件，大大节省内存，依赖性更强
+          静态编译：编译时把调用的库文件添加副本到程序源代码中，一起进行编译，会使程序的内存变大，但是依赖性更小
+
+      程序运行：
+        开机启动
+        用户交互启动-终端
+          终端：硬件设备，关联一个用户接口
+          与终端相关：通过终端启动
+          与终端无关：操作引导启动过程当中自动启动
+    Linux系统组成部分
+      硬件-》内核-》系统调用-》shell、库函数、应用-》应用
+      静态：kernel + application   内核+应用程序
+        应用程序：二进制文件、库文件、配置文件、帮助文件
+      有效管理文件和追踪文件： 文件系统-层级结构
+
+      启动：首先加载内核程序，之后激活文件系统树，在根据路径启动相应的程序
+        Linux标准委员会制定了FHS    
+          Filesystem Hierarchy Standard 文件系统层级结构标准
+
+          /bin：所有用户可用的基本命令程序文件
+          /sbin：共系统管理使用的工具程序
+          /boot：引到进程必须用到的一切静态文件：kernel、initramfs(initrd
+          )、grub等，不包括引导期间和映射安装器不需要的配置文件
+          /dev：特殊文件或者设备文件的存放位置
+              设备两种类型：字符设备(数据交换是字符为单位如：键盘，显示器等I/O设备；线性设备)、块设备(数据交换是块-block为单位；随机设备如：硬盘(看电影等)、内存等等)
+          /etc：/etc也是层级，包含配置文件，一个配置文件是一个用来控制一个程序运行的本地文件，必须是静态和非可执行文件。大多数是文本文件
+              opt： 为/opt下的程序提供配置文件
+              X11：为X Window system提供配置文件-可选
+              sgml：为SGML提供配置文件-可选
+              xml： 为XML提供配置文件-可选
+          /home：用户家目录-可选
+              相当标准的概念，它显然是站点指定的文件系统，设置因主机而异。因此，不应该有程序依赖于这个位置
+          /root：root超级管理员的家目录-可选
+          /lib：必不可少的的共享库和内核模块
+              包括在引导系统和在root文件系统运行命令需要的分享库映像，也就是通过/bin和/sbin的二进制文件
+              libc.so.*：动态链接C库文件-可选
+              ld*：运行时连接器/加载器-可选
+              modules：可装载的内核模块-可选
+          /lib64：可替换的格式必不可少的分享库   64位系统特有的存放64位共享库的路径
+          /media：移动式多媒体设备挂载点
+            /floppy：软盘驱动-可选
+            /cdrom：CD-ROM 驱动-可选
+            /cdrecorder CD writer-可选
+            zip： Zip 驱动-可选
+          /mnt：临时被挂载的文件系统挂载点
+          /opt：Add-on application software packages 附加应用程序软件包-可选
+              附加：第三方 补充的
+              optional
+          /srv：services   系统为服务提供数据，因主机而异
+          /tmp：临时文件   为那些需要临时文件的程序提供临时文件存放位置
+                可供所有用户执行写入操作；有特殊权限
+          /usr：/usr是一个层级结构
+                文件系统第二主要部分，是一个可共享的，只读的数据。也就是说/usr在各种各样符合FHS的主机是可共享的和不可写的，与主机相关或随时间变化的任何信息都存储在其他位置
+                bin： 大部分的用户命令
+                include：C程序头文件
+                lib：库文件
+                local：本地层级结构(主安装后是空的)
+                      系统管理员在本地安装软件的位置，通常是第三方应用
+                      bin： 本地二进制文件
+                      etc：为本地二进制文件的主机特定的系统配置文件
+                      games：本地游戏二进制文件
+                      include：本地C程序头文件
+                      lib：本地库文件
+                      man：本地的在线使用手册
+                      sbin：本地系统二进制文件
+                      share：本地架构无关的层级结构
+                      src：本地源代码
+                sbin：Non-vital system binaries 非必不可少的系统二进制文件
+                share：Architecture-independent data   架构无关的数据
+                X11R6: XWindow System， version 11 release 6 -可选
+                games：游戏和有教育意义的二进制文件-可选
+                lib64：可替代格式的二进制文件-可选
+                src：源代码-可选
+          /var：层级结构   变化的数据文件存放位置
+                包括spool目录和文件、管理和日志数据、以及短暂临时的文件
+                cache：应用缓存数据
+                lib：可变状态信息
+                local：为/usr/local准备的可变数据
+                lock：锁文件
+                log：长文件和目录  日志文件
+                opt：为/opt准备的可变数据
+                run：运行中的进程有关的数据
+                spool：应用程序spool数据
+                tmp：系统重新引导-重启之间保留的临时文件
+          最多接触的两个目录：调优专用 /proc /sys
+            /proc：内核和进程相关信息的基于内存的虚拟文件系统。多为内核参数
+                  实际上是处理进程和系统信息的标准Linux方法
+                  例如：
+                      net.ipv4.ip_forward 虚拟为net/ipv4/ip_forward，存储于/proc/sys/，其完整路径为/proc/sys/net/ipv4/ip_forward
+            /sys：sysfs虚拟文件系统提供了一种比proc更为理想的访问内核数据的途径
+                  sysfs是Linux内核中设计较新的一种虚拟的基于内存的文件系统
+                  sysfs为管理Linux设备提供一种统一模型的接口
+                  sysfs文件系统总是被挂载在/sys挂载点上
+                  Linux 从内核2.6版本才开始有的
+                  参考：https://www.ibm.com/developerworks/cn/linux/l-cn-sysfs/
+                至关重要
+                
+          /run 自己google
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
